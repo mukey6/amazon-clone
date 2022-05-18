@@ -1,8 +1,9 @@
 import React from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
-export default function Product({ title, price, image, rating }) {
+export default function Product({ id, title, price, image, rating }) {
   const [{basket}, dispatch]=useStateValue()
+  console.log('>>>>basketb', basket)
   const addToBasket =() =>{
       dispatch({
         type:'ADD_TO_BASKET',

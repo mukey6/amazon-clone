@@ -2,9 +2,11 @@ export const initialState = {
     basket:[]
 }
 // selector
-export const getBasketTotal= (basket)=>
-// tallies the basket and tallies items price and adds it to final amount
-basket?.reduce((amount, item)=> item.price+ amount, 0)
+// export const getBasketTotal= (basket)=>{
+//     // tallies the basket and tallies items price and adds it to final amount
+//     basket?.reduce((amount, item)=> item.price+ amount, 0)
+
+// }
 
 const reducer = (state, action)=>{
     console.log(action, '')
@@ -25,7 +27,7 @@ const reducer = (state, action)=>{
                 }
                 return {
                     ...state,
-                    basket:newBasket
+                    basket: newBasket
                 }
 
             default:
